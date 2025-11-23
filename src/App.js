@@ -4,45 +4,49 @@ import React, { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
 import About from './components/About';
-import Project from './components/Project'; // Check spelling: Project.js or Projects.js
+import Project from './components/Project'; // Correct component
 import Contact from './components/Contact';
 
-// Kung may global styles ka (optional)
-import './App.css'; 
+// Styles
+import './App.css';
 
-// ETO YUNG CODE NA PINAKITA MO KANINA:
 const App = () => {
   const [activeSection, setActiveSection] = useState('home');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  // Scroll to top when switching views (simulating router behavior)
+  // Scroll to top when switching
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }, [activeSection]);
 
   const renderSection = () => {
-    switch(activeSection) {
-      case 'home': return <Home setActiveSection={setActiveSection} />;
-      case 'about': return <About />;
-      case 'projects': return <Projects />;
-      case 'contact': return <Contact />;
-      default: return <Home setActiveSection={setActiveSection} />;
+    switch (activeSection) {
+      case 'home':
+        return <Home setActiveSection={setActiveSection} />;
+      case 'about':
+        return <About />;
+      case 'projects':
+        return <Project />;   // <-- FIXED HERE
+      case 'contact':
+        return <Contact />;
+      default:
+        return <Home setActiveSection={setActiveSection} />;
     }
   };
 
   return (
     <div className="font-sans text-slate-800 bg-sky-50 min-h-screen selection:bg-sky-200 selection:text-sky-900">
       <Navbar 
-        activeSection={activeSection} 
+        activeSection={activeSection}
         setActiveSection={setActiveSection}
         mobileMenuOpen={mobileMenuOpen}
         setMobileMenuOpen={setMobileMenuOpen}
       />
+
       <main className="fade-in">
         {renderSection()}
       </main>
-      
-      {/* Global CSS for custom animations */}
+
       <style>{`
         @keyframes blob {
           0% { transform: translate(0px, 0px) scale(1); }
@@ -74,8 +78,5 @@ const App = () => {
     </div>
   );
 };
-
-
-
 
 export default App;
