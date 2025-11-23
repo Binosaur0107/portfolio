@@ -46,25 +46,27 @@ export default function Projects() {
 
               <div className="p-6">
                 <h3 className="text-xl font-bold text-slate-800 mb-2">{project.title}</h3>
-                <p className="text-slate-600 text-sm mb-4 line-clamp-3">
-                  {project.description}
-                </p>
+                <p className="text-slate-600 text-sm mb-4">{project.description}</p>
 
-                <div className="flex flex-wrap gap-2 mb-6">
-                  {project.tags.map(tag => (
-                    <span key={tag} className="px-3 py-1 bg-slate-100 text-slate-600 text-xs rounded-full font-medium">
-                      #{tag}
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {project.tags.map((tag) => (
+                    <span key={tag} className="text-xs font-semibold bg-sky-100 text-sky-600 rounded-full px-3 py-1">
+                      {tag}
                     </span>
                   ))}
                 </div>
 
                 <div className="flex gap-4">
-                  <a href={project.demo} target="_blank" rel="noopener noreferrer" className="flex-1 flex items-center justify-center gap-2 py-2 rounded-lg bg-sky-500 text-white font-medium hover:bg-sky-600 transition-colors">
-                    <ExternalLink size={16} /> Demo
-                  </a>
-                  <a href={project.repo} target="_blank" rel="noopener noreferrer" className="flex-1 flex items-center justify-center gap-2 py-2 rounded-lg border border-slate-200 text-slate-600 font-medium hover:bg-slate-50 transition-colors">
-                    <Github size={16} /> Code
-                  </a>
+                  {project.demo && (
+                    <a href={project.demo} target="_blank" rel="noreferrer" className="text-sky-500 hover:text-sky-700 flex items-center gap-1 text-sm font-semibold">
+                      <ExternalLink size={16} /> Demo
+                    </a>
+                  )}
+                  {project.repo && (
+                    <a href={project.repo} target="_blank" rel="noreferrer" className="text-sky-500 hover:text-sky-700 flex items-center gap-1 text-sm font-semibold">
+                      <Github size={16} /> Code
+                    </a>
+                  )}
                 </div>
               </div>
             </div>

@@ -1,18 +1,18 @@
-import "./App.css";import React, { useState, useEffect } from "react";
+import "./App.css";
+import React, { useState, useEffect } from "react";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import About from "./components/About";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
-import Contacts from "./components/Contacts";
+import Contact from "./components/Contacts";  // Corrected import
 
 export default function App() {
   const [activeSection, setActiveSection] = useState("home");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
-    // Scroll to top when section changes and close mobile menu
-    window.scrollTo({ top: 0, behavior: "smooth" });
+     window.scrollTo({ top: 0, behavior: "smooth" });
     setMobileMenuOpen(false);
   }, [activeSection]);
 
@@ -27,7 +27,7 @@ export default function App() {
       case "projects":
         return <Projects />;
       case "contact":
-        return <Contact />;
+        return <Contact />;  // Matches the import
       default:
         return <Home setActiveSection={setActiveSection} />;
     }
@@ -43,7 +43,7 @@ export default function App() {
       />
       <main className="fade-in">{renderSection()}</main>
 
-      {/* Small inline styles for a few animations used by components */}
+      {/* Inline styles for animations */}
       <style>{`
         @keyframes blob {
           0% { transform: translate(0px, 0px) scale(1); }
