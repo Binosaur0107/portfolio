@@ -2,7 +2,7 @@ import React from 'react';
 
 function Contact() {
   return (
-    <div style={{ padding: '20px' }}>
+    <div style={{ padding: '40px' }}>
       <h2>Contact Me</h2>
       <p>Email: arvylacampuenga@example.com</p>
       <p>GitHub: <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">yourusername</a></p>
