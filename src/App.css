@@ -1,44 +1,130 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
-
-html,
-body,
-#root {
+body {
   margin: 0;
-  padding: 0;
-  font-family: "Inter", sans-serif;
-  background-color: #f0f9ff;
-  color: #334155;
-  height: 100%;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: Arial, sans-serif;
+  background-color: #e8f4ff;
 }
 
-/* Utility class for fade-in */
-.fade-in {
-  animation: fadeIn 0.7s ease forwards;
-  opacity: 0;
+/* NAVBAR */
+.navbar {
+  background: #87cefa;
+  padding: 15px 0;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
 }
 
-
-
-
-@keyframes fadeIn {
-  to {
-    opacity: 1;
-  }
+.menu a {
+  margin: 0 20px;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
 }
 
-/* Scrollbar styles */
-::-webkit-scrollbar {
-  width: 10px;
+.menu a:hover {
+  text-decoration: underline;
 }
-::-webkit-scrollbar-track {
-  background: #e0f2fe;
+
+/* MAIN SECTIONS */
+.section-box {
+  background: #fff;
+  max-width: 900px;
+  margin: 120px auto 40px;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
 }
-::-webkit-scrollbar-thumb {
-  background-color: #0284c7;
+
+.section-box h2 {
+  text-align: center;
+  color: #0073e6;
+}
+
+/* HOME SECTION */
+.home-section {
+  margin-top: 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  background: #fff;
+  padding: 40px;
   border-radius: 10px;
 }
 
-/* Additional utility classes (if needed) */
-/* You can expand as needed */
+.left h1 {
+  font-size: 32px;
+  color: #004a99;
+}
+
+.left h3 {
+  color: #003366;
+}
+
+.tagline {
+  font-style: italic;
+  color: #555;
+}
+
+.buttons {
+  margin-top: 20px;
+}
+
+.btn {
+  background: #1e90ff;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  margin-right: 10px;
+  display: inline-block;
+}
+
+.btn:hover {
+  background: #187bcd;
+}
+
+.right .profile-pic {
+  width: 180px;
+  height: 180px;
+  border-radius: 100%;
+  object-fit: cover;
+  border: 4px solid #87cefa;
+}
+
+/* SKILLS */
+.skills-list li {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+/* PROJECTS */
+.project-card {
+  margin-bottom: 30px;
+}
+
+.project-card a {
+  color: #0073e6;
+  font-weight: bold;
+}
+
+/* CONTACT FORM */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.contact-form button {
+  cursor: pointer;
+}

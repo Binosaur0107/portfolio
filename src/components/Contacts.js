@@ -1,16 +1,21 @@
-import React from "react";
-
 export default function Contact() {
-  
   return (
-    <section id="contact" className="section">
+    <section id="contact" className="section-box">
       <h2>Contact</h2>
-      <p>
-        You can reach me at{" "}
-        <a href="mailto:arvymagimot07@gmail.com" className="email-link">
-          arvymagimot07@gmail.com
-        </a>
-      </p>
+
+      <form 
+        className="contact-form"
+        action="mailto:arvymagimot07@gmail.com"
+        method="POST"
+        encType="text/plain"
+      >
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+
+        <textarea name="message" placeholder="Your Message" required></textarea>
+
+        <button type="submit" className="btn">Send Message</button>
+      </form>
     </section>
   );
 }
