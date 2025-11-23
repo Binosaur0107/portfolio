@@ -1,38 +1,117 @@
-.App {
-  text-align: center;
+/* App.css - Midnight Gradient Portfolio Theme */
+
+/* Reset some defaults */
+* {
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #001f3f, #3a0ca3); /* Navy → Deep Purple */
+  color: white;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+/* Container */
+#root, .App {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 2rem;
 }
 
-.App-link {
-  color: #61dafb;
+/* Headings */
+h1, h2, h3 {
+  color: #00ffff; /* Cyan */
+  text-shadow: 0 0 6px #00ffffaa, 0 0 12px #00ffff77;
+  margin: 0 0 1rem 0;
+  font-weight: 700;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Paragraphs */
+p {
+  line-height: 1.5;
+  color: #ddd;
+}
+
+/* Links */
+a {
+  color: #00ffff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+a:hover,
+a:focus {
+  color: #00e5e5;
+  text-decoration: underline;
+  outline: none;
+}
+
+/* Buttons */
+button {
+  background: transparent;
+  border: 2px solid #00ffff;
+  color: #00ffff;
+  padding: 0.5rem 1.25rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: box-shadow 0.3s ease, color 0.3s ease;
+  box-shadow: 0 0 5px #00ffff55;
+}
+button:hover,
+button:focus {
+  color: #00e5e5;
+  box-shadow:
+    0 0 10px #00ffffbb,
+    0 0 20px #00ffff88;
+  outline: none;
+}
+
+/* Section Styling */
+section {
+  background: rgba(58, 12, 163, 0.3); /* translucent deep purple */
+  border-radius: 12px;
+  padding: 2rem;
+  max-width: 800px;
+  width: 100%;
+  margin-bottom: 2rem;
+  box-shadow: 0 0 15px #001f3f55;
+  border: 1px solid #00ffff33;
+  backdrop-filter: blur(8px);
+}
+
+/* Cards inside sections */
+section > div {
+  margin-bottom: 1.5rem;
+  padding: 1rem 1.5rem;
+  background: rgba(0, 31, 63, 0.4); /* translucent navy */
+  border-radius: 10px;
+  box-shadow: 0 0 10px #001f3f44;
+}
+
+/* Utility Classes */
+.glow {
+  text-shadow:
+    0 0 6px #00ffffaa,
+    0 0 12px #00ffff77;
+}
+
+.accent {
+  color: #00ffff;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  section {
+    padding: 1rem;
   }
-  to {
-    transform: rotate(360deg);
+  section > div {
+    padding: 1rem;
   }
 }
