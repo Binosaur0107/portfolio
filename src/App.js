@@ -13,6 +13,7 @@ export default function App() {
 
 
 
+
   return (
     <>
       <Navbar activeSection={activeSection} setActiveSection={setActiveSection} />
