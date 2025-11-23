@@ -5,7 +5,7 @@ function Contact() {
     <div style={{ padding: '20px' }}>
       <h2>Contact Me</h2>
       <p>Email: arvylacampuenga@example.com</p>
-      <p>GitHub: <a href="https://github.com/yourusername">yourusername</a></p>
+      <p>GitHub: <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">yourusername</a></p>
       <p>LinkedIn: <a href="#">Your Profile</a></p>
     </div>
   );
