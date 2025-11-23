@@ -1,5 +1,5 @@
 import React from "react";
-import "./App.css";  // <-- Import the CSS here
+import "./App.css";
 
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
@@ -12,11 +12,13 @@ export default function App() {
   return (
     <>
       <Navbar />
-      <Home />
-      <About />
-      <Skills />
-      <Projects />
-      <Contact />
+      <main>
+        <Home />
+        <About />
+        <Skills />
+        <Projects />
+        <Contact />
+      </main>
     </>
   );
 }
